@@ -1,0 +1,6 @@
+{
+    "token": "YOUR_BOT_TOKEN",
+    "prefix": "YOUR_PREFIX",
+    "owners": "YOUR_ID",
+    "google": "YOUR_GOOGLE_API"
+}
