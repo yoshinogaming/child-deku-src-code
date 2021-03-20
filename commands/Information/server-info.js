@@ -48,9 +48,7 @@ exports.run = async (client, message, args) => {
     .addField("Server region", location, true)
     .addField("Server ID", message.guild.id, true)
     .addField("Server created since", `${test} \n> ${h} Day(s) ago`, true)
-//    .addField(`Server members (Total: [${total}])`, `Do Not Disturb: ${dnd} \nIdle: ${idle} \nOnline: ${online} \nOffline: ${offline} \nBots: ${robot}`, true)
-    .addField(`Server channels (Total: [${totalchan}])`, `Category: ${category} \nText: ${text} \nVoice: ${vc}`, true)
-    message.channel.send(embed); // Let's see if it's working!
+//    .addField(`Server members (Total: [${total}])`, `Do Not Disturb: ${dnd} \nIdle: ${idle} \nOnline: ${online} \nOffline: ${offline} \nBots: ${robot}`, true)   message.channel.send(embed); // Let's see if it's working!
 }
 
 exports.help = {

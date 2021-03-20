@@ -1,10 +1,11 @@
 {
-  "name": "saturnclient",
+  "name": "chil-deku",
   "version": "1.0.0",
-  "description": "Example Bot",
+  "description": "Verified Bot",
   "main": "index.js",
   "dependencies": {
     "alexa-bot-api": "^0.1.9",
+    "atob": "^2.1.2",
     "axios": "^0.20.0",
     "canvacord": "^5.0.8",
     "child_process": "^1.0.2",

@@ -8,6 +8,8 @@ const alexa = require('alexa-bot-api');
 let ai = new alexa("aw2plm");
 const db = require('quick.db');
 
+const fetch = require('node-fetch')
+
 require("./handler/module.js")(client);
 require("./handler/Event.js")(client);
 
@@ -21,7 +23,7 @@ client.once('ready', () => {
 
 client.on('message', async message => {
     if (message.author.bot) return;
-    
+
     if(message.content.startsWith(`<@${client.user.id}>`) || message.content.startsWith(`<@!${client.user.id}>`)){
     return message.channel.send(`Hello ${message.author}, my prefix is **${config.prefix}**\nYou can start by typing **${config.prefix}help**, it's will show you a list of **<@${client.user.id}>**'s commands`);
   }
@@ -42,7 +44,7 @@ client.on('message', async message => {
         message.channel.send(embed).then(m => m.delete({ timeout: 15000 }));
       }
     }
-
+    
     if (authorStatus) {
     const embed = new Discord.MessageEmbed()
     .setColor("RANDOM")
@@ -52,15 +54,15 @@ client.on('message', async message => {
     message.channel.send(embed).then(m => m.delete({ timeout: 15000 }));
     afk.delete(message.author.id);
     }
-    
-    if (message.channel.id === "782860023135076362") {
 
-      let content = message.content;
-  
-      ai.getReply(content).then(r => message.channel.send(`${message.author}, ${r}`)); 
-      } else {
-          return;
-      }
+    if (message.channel.id === '822704783231680573') {
+      fetch(`https://api.monkedev.com/fun/chat?msg=${message.content}%20there!&uid=${message.author.id}`)
+        .then(response => response.json())
+        .then(data => {
+          message.reply(data.response)
+        })
+    }
+
 });
 
 client.login(config.token);
