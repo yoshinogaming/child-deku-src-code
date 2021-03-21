@@ -55,8 +55,9 @@ client.on('message', async message => {
     afk.delete(message.author.id);
     }
 
-    if (message.channel.id === '822704783231680573') {
-      fetch(`https://api.monkedev.com/fun/chat?msg=${message.content}%20there!&uid=${message.author.id}`)
+//    if (message.channel.id === '822704783231680573') {
+    if(config.channels.includes(message.channel.id)) {
+        fetch(`https://api.monkedev.com/fun/chat?msg=${message.content}%20there!&uid=${message.author.id}`)
         .then(response => response.json())
         .then(data => {
           message.reply(data.response)
