@@ -7,7 +7,7 @@
     "alexa-bot-api": "^0.1.9",
     "atob": "^2.1.2",
     "axios": "^0.20.0",
-    "canvacord": "^5.0.8",
+    "canvacord": "^5.1.0",
     "child_process": "^1.0.2",
     "cpu-stat": "^2.0.1",
     "dateformat": "^3.0.3",
