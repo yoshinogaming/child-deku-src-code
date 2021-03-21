@@ -35,7 +35,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
     name: "del-response",
     description: "delete some trigger from your server!",
-    usage: [`${config.prefix}del-response [trigger]`],
+    usage: [`${config.prefix}del-response [Trigger]`],
     example: [`${config.prefix}del-response Hi`]
 }
 
