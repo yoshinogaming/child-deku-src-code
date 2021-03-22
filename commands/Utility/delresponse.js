@@ -4,10 +4,12 @@ const config = require('../../config.json');
 const db = require('quick.db');
 
 exports.run = async (client, message, args) => {
+    
+    if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`Hello ${message.author}, you need **Manage Messages** permission to run this command!`)
 
     let cmdname = args[0]
 
-    if (!cmdname) return message.channel.send("Try again with the trigger name!`")
+    if (!cmdname) return message.channel.send("Try again with the trigger name!")
 
     let database = db.get(`cmd_${message.guild.id}`)
 
