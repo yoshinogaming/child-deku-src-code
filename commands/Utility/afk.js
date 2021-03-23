@@ -33,7 +33,7 @@ exports.run = async (client, message) => {
 exports.help = {
     name: "afk",
     description: "Set your afk status globaly!",
-    usage: [`${config.prefix}afk <Reason>`],
+    usage: [`${config.prefix}afk [Reason]`],
     example: [`${config.prefix}afk Im busy!`]
 }
   

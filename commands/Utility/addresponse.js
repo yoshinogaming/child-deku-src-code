@@ -33,7 +33,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
     name: "add-response",
     description: "add some custom response into your server!",
-    usage: [`${config.prefix}add-response [Trigger] <Response>`],
+    usage: [`${config.prefix}add-response <Trigger> [Response]`],
     example: [`${config.prefix}add-response Hi Hello`]
 }
 
